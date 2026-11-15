@@ -1,0 +1,6 @@
+{
+  "name": "AI Emergency Detection & Alert System",
+  "description": "Simulated healthcare IoT monitoring dashboard demonstrating real-time senior safety telemetry, automated emergency detection, smart contact prioritization, and escalation workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

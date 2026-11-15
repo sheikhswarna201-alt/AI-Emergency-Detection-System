@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0B1020;
+    color: #FFFFFF;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0B1020;
+    color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Dark Midnight Navy Map Styling for OpenStreetMap Tiles & Popups */
+.dark-map-tiles .leaflet-tile-pane {
+  filter: invert(92%) hue-rotate(196deg) brightness(0.88) contrast(0.95) saturate(0.75);
+}
+
+.dark-map-tiles .leaflet-control-attribution {
+  background: rgba(16, 24, 43, 0.88) !important;
+  color: #AAB6CC !important;
+  border-top-left-radius: 6px;
+  font-size: 11px !important;
+  padding: 2px 8px !important;
+}
+
+.dark-map-tiles .leaflet-control-attribution a {
+  color: #3B82F6 !important;
+}
+
+.dark-map-tiles .leaflet-popup-content-wrapper,
+.dark-map-tiles .leaflet-popup-tip {
+  background: #10182B !important;
+  color: #FFFFFF !important;
+  border: 1px solid #263657;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45) !important;
+}
+
+.dark-map-tiles .leaflet-popup-close-button {
+  color: #AAB6CC !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
